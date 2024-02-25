@@ -15,7 +15,19 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"fieldList": [],
+					"dataset": {
+						"referenceName": "ds_formula_1_raw",
+						"type": "DatasetReference",
+						"parameters": {
+							"p_window_end_date": {
+								"value": "@pipeline().parameters.p_window_end_date",
+								"type": "Expression"
+							}
+						}
+					},
+					"fieldList": [
+						"exists"
+					],
 					"storeSettings": {
 						"type": "AzureBlobFSReadSettings",
 						"recursive": true,
@@ -68,6 +80,10 @@
 										"type": "Expression"
 									}
 								}
+							},
+							"linkedServiceName": {
+								"referenceName": "ls_databricks_course",
+								"type": "LinkedServiceReference"
 							}
 						},
 						{
@@ -94,6 +110,10 @@
 										"type": "Expression"
 									}
 								}
+							},
+							"linkedServiceName": {
+								"referenceName": "ls_databricks_course",
+								"type": "LinkedServiceReference"
 							}
 						},
 						{
@@ -120,6 +140,10 @@
 										"type": "Expression"
 									}
 								}
+							},
+							"linkedServiceName": {
+								"referenceName": "ls_databricks_course",
+								"type": "LinkedServiceReference"
 							}
 						},
 						{
@@ -146,6 +170,10 @@
 										"type": "Expression"
 									}
 								}
+							},
+							"linkedServiceName": {
+								"referenceName": "ls_databricks_course",
+								"type": "LinkedServiceReference"
 							}
 						},
 						{
@@ -172,6 +200,10 @@
 										"type": "Expression"
 									}
 								}
+							},
+							"linkedServiceName": {
+								"referenceName": "ls_databricks_course",
+								"type": "LinkedServiceReference"
 							}
 						},
 						{
@@ -198,6 +230,10 @@
 										"type": "Expression"
 									}
 								}
+							},
+							"linkedServiceName": {
+								"referenceName": "ls_databricks_course",
+								"type": "LinkedServiceReference"
 							}
 						},
 						{
@@ -224,6 +260,10 @@
 										"type": "Expression"
 									}
 								}
+							},
+							"linkedServiceName": {
+								"referenceName": "ls_databricks_course",
+								"type": "LinkedServiceReference"
 							}
 						},
 						{
@@ -250,25 +290,13 @@
 										"type": "Expression"
 									}
 								}
+							},
+							"linkedServiceName": {
+								"referenceName": "ls_databricks_course",
+								"type": "LinkedServiceReference"
 							}
 						}
 					]
-				}
-			},
-			{
-				"name": "Copy data1",
-				"type": "Copy",
-				"dependsOn": [],
-				"policy": {
-					"timeout": "0.12:00:00",
-					"retry": 0,
-					"retryIntervalInSeconds": 30,
-					"secureOutput": false,
-					"secureInput": false
-				},
-				"userProperties": [],
-				"typeProperties": {
-					"enableStaging": false
 				}
 			}
 		],
