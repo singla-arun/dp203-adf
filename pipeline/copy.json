@@ -34,7 +34,7 @@
 						"formatSettings": {
 							"type": "DelimitedTextWriteSettings",
 							"quoteAllText": true,
-							"fileExtension": ".csv"
+							"fileExtension": ".txt"
 						}
 					},
 					"enableStaging": false,
@@ -55,7 +55,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "nyx_csv",
+						"referenceName": "nyx_csv_1",
 						"type": "DatasetReference"
 					}
 				]
