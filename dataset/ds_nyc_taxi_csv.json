@@ -1,0 +1,23 @@
+{
+	"name": "ds_nyc_taxi_csv",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_so_cal",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "taxi_data_csv",
+				"fileSystem": "nyc-taxi-data"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
